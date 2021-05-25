@@ -1,0 +1,35 @@
+
+
+
+
+  <ion-header>
+      <ion-toolbar>
+          <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Autopeças Fusca Azul</ion-title>
+      </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-text class="ion-text-center">
+          <h3>Lista de Peças</h3>
+      </ion-text>
+      <ion-list>
+          <ion-item *ngFor="let item of itens; let i = index"
+          [routerLink]="['',i]">
+
+              <ion-label>
+                  <h3>Código:{{item.codigo}}</h3>
+                  <h3>Descricao:{{item.descricao}}</h3>
+                  <h3>tipo:{{item.tipo}}</h3>
+                  <h3>Preço:{{item.preco}}</h3>
+                  <h3>Quantidade:{{item.estoque}}</h3>
+                  <h3>Loja disponível: {{item.loja}}</h3>
+
+              </ion-label>
+          </ion-item>
+      </ion-list>
+  </ion-content>
+
+
+
